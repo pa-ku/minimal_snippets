@@ -1,0 +1,50 @@
+{
+  "console.warn": {
+    "prefix": "warn",
+    "body": ["console.warn ('$1')"]
+  },
+  "consolecolor": {
+    "prefix": "clgcolor",
+    "body": ["console.log(`%c $1 `, 'color:#9ee5ff ;font-size:1.3rem')"]
+  },
+  "console": {
+    "prefix": "clg",
+    "body": ["console.log($1)"]
+  },
+  "warn": {
+    "prefix": "clgwran",
+    "body": ["warn($1)"]
+  },
+  "mathrandom": {
+    "prefix": "mathrandom",
+    "body": ["Math.random()"]
+  },
+  "mathfloor": {
+    "prefix": "mathfloor",
+    "body": ["Math.floor()"]
+  },
+  "random": {
+    "prefix": "randomnumber",
+    "body": ["Math.floor( Math.random ( )* $1 )"]
+  },
+"fetchapi":{
+  "prefix": "fetch",
+  "body": [
+    "async function fecthPokemons(){",
+      "try{",  
+      "const res = await fetch(`https://pokeapi.co/api/v2/pokemon/`)",
+      "const data = await res.json()",
+      "",      
+      "if(!res.ok){",
+      "throw new Error('Recurso no encontrado',res.status)",
+      "}",
+      "",
+      "console.log(data)",  
+      "}",  
+      "catch(err){",  
+      "console.error('¡Hubo un problema con la solicitud!', err)",  
+      "}}",
+    
+  ]
+}
+}

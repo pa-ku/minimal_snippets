@@ -1,0 +1,39 @@
+{
+  "name": "minimal-snippets",
+  "displayName": "Minimal Snippets",
+  "description": "unos pocos pero utiles snippets para css html react tailwind y express",
+  "version": "0.0.3",
+  "publisher": "Paku",
+  "repository": "",
+  "icon": "icon.webp",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/javascript.code-snippets"
+      },
+      {
+        "language": "css",
+        "path": "./snippets/css.code-snippets"
+      },
+      {
+        "language": "tailwindcss",
+        "path": "./snippets/tailwindcss.code-snippets"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/javascriptreact.code-snippets"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/html.code-snippets"
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "component call": {
+    "prefix": "<<",
+    "body": ["<$1 />"]
+  },
+  "styled": {
+    "prefix": "styled",
+    "body": ["const $1 = styled.$2`", "$4", "`"]
+  },
+  "useState": {
+    "prefix": "usestate",
+    "body": ["const [$1, set$2] = useState($3)"]
+  },
+  "console": {
+    "prefix": "console",
+    "body": ["console.log('%c $1 ', 'color:#2595be ;size:1.3rem');"]
+  },
+  "createcontext": {
+    "prefix": "createcontext",
+    "body": [
+      " import { createContext } from 'react'",
+      "export const NameContext = createContext()",
+      "",
+      "export function NameProvider({ children }) {",
+      "  return <NameContext.Provider value={'name'}>{children}</NameContext.Provider>}"
+    ]
+  }
+}
