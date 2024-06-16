@@ -1,12 +1,50 @@
-# Minor snippets
+# `- Css`
 
-# css
+| Snippet | Codigo |
+| --- | --- |
+| cssreset | margin 0; border-box |
+| selection | Cambiar el diseño del seleccionado de texto |
+| scrollbar | Valores para cambiar el diseño del scroll |
+| flexcenter | align-items: center justify-content: center |
+| flexcol | flex-direction: column |
+| media | @media(max-width:700px){ } |
+| animation | keyframe template |
 
-- cssreset: coloca los valores a 0
-- scrollbar: crea el codigo para modificar las opciones del scrollbar
-- poppins: importar la fuente poppins al index
+# `- Javascript`
 
-# html
+| *Snippet* | *Codigo* |
+| --- | --- |
+| log | console.log() |
+| logcolor | console.log(\`%c \`, 'color:#9ee5ff ;font-size:1.3rem') |
+| warn | console.warn() |
+| mathrandom | Math.random () |
+| mathfloor | Math.floor() |
+| random | Math.floor( Math.random ( ) \* ) |
+| fetch | Genera una funcion async para el fetch |
 
+# `- Css`
 
-# javascript
+| *Snippet* | *Codigo* |
+| --- | --- |
+| cssreset | margin 0; border-box |
+| selection | Cambiar el diseño del seleccionado de texto |
+| scrollbar | Valores para cambiar el diseño del scroll |
+| flexcenter | align-items: center justify-content: center |
+| flexcol | flex-direction: column |
+| media | @media(max-width:700px){ } |
+| animation | keyframe template |
+
+# `- React`
+
+| *Snippet* | *Codigo* |
+| --- | --- |
+| createcontext | Genera un template para crear un context y provider |
+| usestate | const \[$1, set$2\] = useState($3) |
+| useeffect | useEffect(( ) => {return function cleanup( ){ }}\[ \]) |
+| styled | Template para styled components |
+| <<  | &lt;$1 /&gt; |
+
+# `- Html`
+| *Snippet* | *Codigo* |
+| --- | --- |
+| favicon | Etiqueta de favicon |

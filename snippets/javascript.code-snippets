@@ -4,16 +4,12 @@
     "body": ["console.warn ('$1')"]
   },
   "consolecolor": {
-    "prefix": "clgcolor",
+    "prefix": "logcolor",
     "body": ["console.log(`%c $1 `, 'color:#9ee5ff ;font-size:1.3rem')"]
   },
   "console": {
-    "prefix": "clg",
+    "prefix": "log",
     "body": ["console.log($1)"]
-  },
-  "warn": {
-    "prefix": "clgwran",
-    "body": ["warn($1)"]
   },
   "mathrandom": {
     "prefix": "mathrandom",

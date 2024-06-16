@@ -1,78 +1,81 @@
 {
-    "FlexCenter": {
-      "prefix": "flexcenter",
-      "body": [
-        "display: flex;",
-        "align-items: center;",
-        "justify-content: center;"
-      ]
-    },
-  
-    "FlexColumn": {
-      "prefix": "flexcol",
-      "body": [
-        "display: flex;",
-        "align-items: center;",
-        "justify-content: center;",
-        "flex-direction: column;"
-      ]
-    },
-  
-    "CssReset": {
-      "prefix": "CssReset",
-      "body": [
-        "*, *::before, *::after {",
-        " box-sizing: border-box;",
-        "font-family:'Roboto', sans-serif;",
-        "margin:0; ",
-        "}"
-      ]
-    },
-    "Clamp": {
-      "prefix": "clamp",
-      "body": ["clamp($1,$2,$3)"]
-    },
+  "FlexCenter": {
+    "prefix": "flexcenter",
+    "body": [
+      "display: flex;",
+      "align-items: center;",
+      "justify-content: center;"
+    ]
+  },
 
-    "media": {
-      "prefix": "media",
-      "body": ["@media(max-width:700px){", "", "}"]
-    },
+  "FlexColumn": {
+    "prefix": "flexcol",
+    "body": [
+      "display: flex;",
+      "align-items: center;",
+      "justify-content: center;",
+      "flex-direction: column;"
+    ]
+  },
 
-    "remove-Mobile-Touch": {
-      "prefix": "removeMobileTouch",
-      "body": [
-        "/* remove TouchMobile */",
-        "-webkit-tap-highlight-color: rgba(0,0,0,0);",
-        "-webkit-tap-highlight-color: transparent;"
-      ]
-    },
-  
-    "scrollbarStyle": {
-      "prefix": "scrollbarStyle",
-      "body": [
-        "/* Scrollbar */",
-        "::-webkit-scrollbar {",
-        "background-color: #333;",
-        "width: 17px;",
-        "}",
-        "::-webkit-scrollbar-thumb {",
-        "background-color: #aaaaaa;",
-        "border: 3.2px solid #333;",
-        "}",
-        "::-webkit-scrollbar-thumb:hover {",
-        "background-color: #777;",
-        "}"
-      ]
-    },
-    "selection": {
-      "prefix": "selection",
-      "body": [
-        "/* SELECTION */",
-        "::selection {",
-        "color: white;",
-        "background: #2595be80;",
-        "}"
-      ]
-    }
+  "CssReset": {
+    "prefix": "CssReset",
+    "body": [
+      "*, *::before, *::after {",
+      " box-sizing: border-box;",
+      "font-family:'Roboto', sans-serif;",
+      "margin:0; ",
+      "}"
+    ]
+  },
+  "Clamp": {
+    "prefix": "clamp",
+    "body": ["clamp($1,$2,$3)"]
+  },
+
+  "media": {
+    "prefix": "media",
+    "body": ["@media(max-width:700px){$1} "]
+  },
+
+  "remove-Mobile-Touch": {
+    "prefix": "removeMobileTouch",
+    "body": [
+      "/* remove TouchMobile */",
+      "-webkit-tap-highlight-color: rgba(0,0,0,0);",
+      "-webkit-tap-highlight-color: transparent;"
+    ]
+  },
+
+  "scrollbarStyle": {
+    "prefix": "scrollbar",
+    "body": [
+      "/* Scrollbar */",
+      "::-webkit-scrollbar {",
+      "background-color: #333;",
+      "width: 17px;",
+      "}",
+      "::-webkit-scrollbar-thumb {",
+      "background-color: #aaaaaa;",
+      "border: 3.2px solid #333;",
+      "}",
+      "::-webkit-scrollbar-thumb:hover {",
+      "background-color: #777;",
+      "}"
+    ]
+  },
+  "selectionStyle": {
+    "prefix": "selection",
+    "body": [
+      "/* SELECTION */",
+      "::selection {",
+      "color: white;",
+      "background: #2595be80;",
+      "}"
+    ]
+  },
+  "animation": {
+    "prefix": "animation",
+    "body": ["@keyframes $1 {", "  0%{", "$2", "}", "100%{", "$3 ", "}", "}"]
   }
-  
+}
