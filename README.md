@@ -1,3 +1,6 @@
+## Minimal
+Una recopilacion reducida de los snippets que considero mas utiles
+
 # `- Css`
 
 | Snippet | Codigo |
@@ -22,17 +25,6 @@
 | random | Math.floor( Math.random ( ) \* ) |
 | fetch | Genera una funcion async para el fetch |
 
-# `- Css`
-
-| *Snippet* | *Codigo* |
-| --- | --- |
-| cssreset | margin 0; border-box |
-| selection | Cambiar el diseño del seleccionado de texto |
-| scrollbar | Valores para cambiar el diseño del scroll |
-| flexcenter | align-items: center justify-content: center |
-| flexcol | flex-direction: column |
-| media | @media(max-width:700px){ } |
-| animation | keyframe template |
 
 # `- React`
 
