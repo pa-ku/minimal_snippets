@@ -1,7 +1,7 @@
-## Minimal
+# Minimal
 Una recopilacion reducida de los snippets que considero mas utiles
 
-# `- Css`
+## `Css`
 
 | Snippet | Codigo |
 | --- | --- |
@@ -13,7 +13,7 @@ Una recopilacion reducida de los snippets que considero mas utiles
 | media | @media(max-width:700px){ } |
 | animation | keyframe template |
 
-# `- Javascript`
+## `Javascript`
 
 | *Snippet* | *Codigo* |
 | --- | --- |
@@ -26,7 +26,7 @@ Una recopilacion reducida de los snippets que considero mas utiles
 | fetch | Genera una funcion async para el fetch |
 
 
-# `- React`
+## `React`
 
 | *Snippet* | *Codigo* |
 | --- | --- |
@@ -36,7 +36,7 @@ Una recopilacion reducida de los snippets que considero mas utiles
 | styled | Template para styled components |
 | <<  | &lt;$1 /&gt; |
 
-# `- Html`
+## `Html`
 | *Snippet* | *Codigo* |
 | --- | --- |
 | favicon | Etiqueta de favicon |
