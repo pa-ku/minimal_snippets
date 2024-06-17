@@ -1,13 +1,13 @@
-# Minimal
-Una recopilacion reducida de los snippets que considero mas utiles
+# Minimal Snippets
+Pocos y faciles de usar 
 
 ## `Css`
 
 | Snippet | Codigo |
 | --- | --- |
 | cssreset | margin 0; border-box |
-| selection | Cambiar el diseño del seleccionado de texto |
-| scrollbar | Valores para cambiar el diseño del scroll |
+| selection | Change the design of text selection |
+| scrollbar | Template for scroll bardesign |
 | flexcenter | align-items: center justify-content: center |
 | flexcol | flex-direction: column |
 | media | @media(max-width:700px){ } |
@@ -23,20 +23,21 @@ Una recopilacion reducida de los snippets que considero mas utiles
 | mathrandom | Math.random () |
 | mathfloor | Math.floor() |
 | random | Math.floor( Math.random ( ) \* ) |
-| fetch | Genera una funcion async para el fetch |
+| fetch | Generates an async function for fetch |
 
 
 ## `React`
 
 | *Snippet* | *Codigo* |
 | --- | --- |
-| createcontext | Genera un template para crear un context y provider |
+| createcontext | Template for context and provider |
 | usestate | const \[$1, set$2\] = useState($3) |
 | useeffect | useEffect(( ) => {return function cleanup( ){ }}\[ \]) |
-| styled | Template para styled components |
+| styled |Template for styled components |
 | <<  | &lt;$1 /&gt; |
 
 ## `Html`
 | *Snippet* | *Codigo* |
 | --- | --- |
-| favicon | Etiqueta de favicon |
+| favicon | Favicon tag
+ |
