@@ -1,6 +1,6 @@
 {
-  "htmlTakeOff": {
-    "prefix": "takeoff",
+  "html template": {
+    "prefix": "html",
     "body": [
       "<!DOCTYPE html>",
       "<html lang='en'>",
@@ -8,14 +8,13 @@
       "<meta charset='UTF-8'>",
       "<meta http-equiv='X-UA-Compatible' content='IE=edge'>",
       "<meta name='viewport' content='width=device-width, initial-scale=1.0'>",
-      "<!-- ---- -->",
+      "<link rel='icon' type='image/x-icon' href=''>",
       "<title>$1</title>",
-      "<meta name='description'content='Descripcion'>",
-      "<meta name='author' content='oneDev'>",
+      "<meta name='description'content='description'>",
+      "<meta name='author' content=''>",
       "<meta name='Robots' content='no-index'> <!-- Evitar Indexasion -->",
       "<link rel='stylesheet' href='style.css'>",
       "<script defer src='script.js'> </script>",
-
       "</head>",
       "<body>",
       "",
@@ -27,14 +26,5 @@
   "favicon": {
     "prefix": "favicon",
     "body": ["<link rel='icon' type='image/x-icon' href='$1'>"]
-  },
-
-  "FontPoppins": {
-    "prefix": "poppins",
-    "body": [
-      "<link rel='preconnect' href='https://fonts.googleapis.com'>",
-      "<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>",
-      "<link href='https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@400;500&display=swap' rel='stylesheet'>"
-    ]
   }
 }
