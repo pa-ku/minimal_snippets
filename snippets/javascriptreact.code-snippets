@@ -11,6 +11,10 @@
     "prefix": "usestate",
     "body": ["const [$1, set$2] = useState($3)"]
   },
+  "useRef": {
+    "prefix": "useref",
+    "body": ["const $1 = useRef()"]
+  },
   "useEffect": {
     "prefix": "useeffect",
     "body": [
@@ -19,10 +23,6 @@
       "return function cleanup() { $2}",
       "}[$3])"
     ]
-  },
-  "console": {
-    "prefix": "console",
-    "body": ["console.log('%c $1 ', 'color:#2595be ;size:1.3rem');"]
   },
   "createcontext": {
     "prefix": "createcontext",
