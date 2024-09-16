@@ -23,24 +23,33 @@
     "prefix": "randomnumber",
     "body": ["Math.floor( Math.random ( )* $1 )"]
   },
-"fetchapi":{
-  "prefix": "fetch",
-  "body": [
-    "async function fecthPokemons(){",
-      "try{",  
-      "const res = await fetch(`https://pokeapi.co/api/v2/pokemon/`)",
+  "fetchapi": {
+    "prefix": "fetch",
+    "body": [
+      "async function fetch(){",
+      "try{",
+      "const res = await fetch(``)",
       "const data = await res.json()",
-      "",      
+      "",
       "if(!res.ok){",
       "throw new Error('Recurso no encontrado',res.status)",
       "}",
       "",
-      "console.log(data)",  
-      "}",  
-      "catch(err){",  
-      "console.error('¡Hubo un problema con la solicitud!', err)",  
-      "}}",
-    
-  ]
-}
+      "console.log(data)",
+      "}",
+      "catch(err){",
+      "console.error('¡Hubo un problema con la solicitud!', err)",
+      "}}"
+    ]
+  },
+  "createcontext": {
+    "prefix": "context",
+    "body": [
+      " import { createContext } from 'react'",
+      "export const ${TM_FILENAME_BASE} = createContext()",
+      "",
+      "export function NameProvider({ children }) {",
+      "  return <${TM_FILENAME_BASE}.Provider value={'name'}>{children}</${TM_FILENAME_BASE}.Provider>}"
+    ]
+  }
 }

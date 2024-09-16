@@ -23,7 +23,7 @@
 | animation  | keyframe template                                  |
 | gradient   | background-image: linear-gradient(from $1, $2, $3) |
 
-## `Javascript`
+## `Javascript / Typescript`
 
 | _Snippet_  | _Codigo_                                                |
 | ---------- | ------------------------------------------------------- |
@@ -39,7 +39,7 @@
 
 | _Snippet_     | _Codigo_                                               |
 | ------------- | ------------------------------------------------------ |
-| createcontext | Template for context and provider                      |
+| context | Template for context and provider                      |
 | usestate      | const \[$1, set$2\] = useState($3)                     |
 | useeffect     | useEffect(( ) => {return function cleanup( ){ }}\[ \]) |
 | useref        | const $1 = useRef()                                    |
