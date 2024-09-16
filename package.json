@@ -39,6 +39,10 @@
         "path": "./snippets/typescriptreact.code-snippets"
       },
       {
+        "language": "express",
+        "path": "./snippets/express.code-snippets"
+      },
+      {
         "language": "html",
         "path": "./snippets/html.code-snippets"
       }

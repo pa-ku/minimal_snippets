@@ -37,12 +37,21 @@
 
 ## `React`
 
-| _Snippet_     | _Codigo_                                               |
-| ------------- | ------------------------------------------------------ |
-| context | Template for context and provider                      |
-| usestate      | const \[$1, set$2\] = useState($3)                     |
-| useeffect     | useEffect(( ) => {return function cleanup( ){ }}\[ \]) |
-| useref        | const $1 = useRef()                                    |
-| styled        | Template for styled components                         |
-| <<            | &lt;$1 /&gt;                                           |
-| component     | creates a function component template                  |
+| _Snippet_ | _Codigo_                                               |
+| --------- | ------------------------------------------------------ |
+| context   | Template for context and provider                      |
+| usestate  | const \[$1, set$2\] = useState($3)                     |
+| useeffect | useEffect(( ) => {return function cleanup( ){ }}\[ \]) |
+| useref    | const $1 = useRef()                                    |
+| styled    | Template for styled components                         |
+| <<        | &lt;$1 /&gt;                                           |
+| component | creates a function component template                  |
+
+## `Express`
+
+| _Snippet_     | _Codigo_                                                                                |
+| ------------- | --------------------------------------------------------------------------------------- |
+| expressconfig | Basic config for cors express and                                                       |
+| cors          | Template for cors configuration with no dependency, add it to a middleware file cors.js |
+| mongoconnect  | Create an easy connection with types                                                    |
+| jwt           | json web token connection                                                               |
