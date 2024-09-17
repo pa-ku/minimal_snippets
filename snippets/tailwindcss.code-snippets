@@ -1,0 +1,10 @@
+{
+  "center": {
+    "prefix": "center",
+    "body": ["flex items-center justify-center"]
+  },
+  "centercol": {
+    "prefix": "center",
+    "body": ["flex flex-col items-center justify-center"]
+  }
+}
