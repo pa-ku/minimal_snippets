@@ -2,7 +2,7 @@
   "name": "minimal-snippets",
   "displayName": "Minimal Snippets",
   "description": "unos pocos pero utiles snippets para css html react tailwind y express",
-  "version": "0.0.9",
+  "version": "0.1.1",
   "publisher": "Paku",
   "repository": "https://github.com/pa-ku/Minimal-Snippets",
   "icon": "icon.webp",
@@ -37,10 +37,6 @@
       {
         "language": "typescriptreact",
         "path": "./snippets/typescriptreact.code-snippets"
-      },
-      {
-        "language": "express",
-        "path": "./snippets/express.code-snippets"
       },
       {
         "language": "html",

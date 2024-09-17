@@ -27,7 +27,8 @@
       "useEffect(() => {",
       "$1",
       "return function cleanup() { $2}",
-      "}[$3])"
+      "",
+      "},[$3])"
     ]
   },
   "createcontext": {
@@ -36,8 +37,8 @@
       " import { createContext } from 'react'",
       "export const ${TM_FILENAME_BASE} = createContext()",
       "",
-      "export function NameProvider({ children }) {",
-      "  return <${TM_FILENAME_BASE}.Provider value={'name'}>{children}</${TM_FILENAME_BASE}.Provider>}"
+      "export function ${TM_FILENAME_BASE}Provider({ children }) {",
+      "  return <${TM_FILENAME_BASE}.Provider value={}>{children}</${TM_FILENAME_BASE}.Provider>}"
     ]
   },
   "fetchapi": {
@@ -49,10 +50,8 @@
       "const data = await res.json()",
       "",
       "if(!res.ok){",
-      "throw new Error('Recurso no encontrado',res.status)",
+      "throw new Error('res.status)",
       "}",
-      "",
-      "console.log(data)",
       "}",
       "catch(err){",
       "console.error('¡Hubo un problema con la solicitud!', err)",

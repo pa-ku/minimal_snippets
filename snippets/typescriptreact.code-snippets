@@ -1,75 +1,73 @@
 {
-    "component call": {
-      "prefix": "<<",
-      "body": ["<$1 />"]
-    },
-    "styled": {
-      "prefix": "styled",
-      "description": "Create base layout for styled component element",
-      "body": ["const $1 = styled.$2`", "$4", "`"]
-    },
-    "consolecolor": {
-      "prefix": "logcolor",
-      "description": "Console log with style",
-      "body": ["console.log(`%c $1 `, 'color:#9ee5ff ;font-size:1.3rem')"]
-    },
-    "useState": {
-      "prefix": "usestate",
-      "body": ["const [$1, set$2] = useState($3)"]
-    },
-    "useRef": {
-      "prefix": "useref",
-      "body": ["const $1 = useRef()"]
-    },
-    "useEffect": {
-      "prefix": "useeffect",
-      "body": [
-        "useEffect(() => {",
-        "$1",
-        "return function cleanup() { $2}",
-        "}[$3])"
-      ]
-    },
-    "createcontext": {
-      "prefix": "context",
-      "body": [
-        " import { createContext } from 'react'",
-        "export const ${TM_FILENAME_BASE} = createContext()",
-        "",
-        "export function NameProvider({ children }) {",
-        "  return <${TM_FILENAME_BASE}.Provider value={'name'}>{children}</${TM_FILENAME_BASE}.Provider>}"
-      ]
-    },
-    "fetchapi": {
-      "prefix": "fetch",
-      "body": [
-        "async function fetch(){",
-        "try{",
-        "const res = await fetch(``)",
-        "const data = await res.json()",
-        "",
-        "if(!res.ok){",
-        "throw new Error('Recurso no encontrado',res.status)",
-        "}",
-        "",
-        "console.log(data)",
-        "}",
-        "catch(err){",
-        "console.error('¡Hubo un problema con la solicitud!', err)",
-        "}}"
-      ]
-    },
-    "Function Component": {
-      "prefix": "component",
-      "body": [
-        "export default function ${TM_FILENAME_BASE}(){",
-        "\treturn(",
-        "\t<>",
-        "\t$1",
-        "\t</>",
-        ")}"
-      ],
-      "description": "Create a templete for fc component"
-    }
+  "component call": {
+    "prefix": "<<",
+    "body": ["<$1 />"]
+  },
+  "styled": {
+    "prefix": "styled",
+    "description": "Create base layout for styled component element",
+    "body": ["const $1 = styled.$2`", "$4", "`"]
+  },
+  "consolecolor": {
+    "prefix": "logcolor",
+    "description": "Console log with style",
+    "body": ["console.log(`%c $1 `, 'color:#9ee5ff ;font-size:1.3rem')"]
+  },
+  "useState": {
+    "prefix": "usestate",
+    "body": ["const [$1, set$2] = useState($3)"]
+  },
+  "useRef": {
+    "prefix": "useref",
+    "body": ["const $1 = useRef()"]
+  },
+  "useEffect": {
+    "prefix": "useeffect",
+    "body": [
+      "useEffect(() => {",
+      "$1",
+      "return function cleanup() { $2}",
+      "",
+      "},[$3])"
+    ]
+  },
+  "createcontext": {
+    "prefix": "context",
+    "body": [
+      " import { createContext } from 'react'",
+      "export const ${TM_FILENAME_BASE} = createContext()",
+      "",
+      "export function ${TM_FILENAME_BASE}Provider({ children }) {",
+      "  return <${TM_FILENAME_BASE}.Provider value={}>{children}</${TM_FILENAME_BASE}.Provider>}"
+    ]
+  },
+  "fetchapi": {
+    "prefix": "fetch",
+    "body": [
+      "async function fetch(){",
+      "try{",
+      "const res = await fetch(``)",
+      "const data = await res.json()",
+      "",
+      "if(!res.ok){",
+      "throw new Error('res.status)",
+      "}",
+      "}",
+      "catch(err){",
+      "console.error('¡Hubo un problema con la solicitud!', err)",
+      "}}"
+    ]
+  },
+  "Function Component": {
+    "prefix": "component",
+    "body": [
+      "export default function ${TM_FILENAME_BASE}(){",
+      "\treturn(",
+      "\t<>",
+      "\t$1",
+      "\t</>",
+      ")}"
+    ],
+    "description": "Create a templete for fc component"
   }
-  
+}

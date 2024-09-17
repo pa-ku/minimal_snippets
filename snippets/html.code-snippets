@@ -26,9 +26,5 @@
   "favicon": {
     "prefix": "favicon",
     "body": ["<link rel='icon' type='image/x-icon' href='$1'>"]
-  },
-  "gradient": {
-    "prefix": "gradient",
-    "body": "background-image: linear-gradient(from $1, $2, $3);"
   }
 }
