@@ -23,20 +23,43 @@
     "prefix": "randomnumber",
     "body": ["Math.floor( Math.random ( )* $1 )"]
   },
-  "fetchapi": {
-    "prefix": "fetch",
+  "fetchGET": {
+    "prefix": "fetchPOST",
     "body": [
-      "async function fetch(){",
+      "async function fetchPOST(postData){",
       "try{",
-      "const res = await fetch(``)",
-      "const data = await res.json()",
+      "const res = await fetch(``), {",
+      " method: 'POST',",
+      "headers: {",
+      "'Content-Type': 'application/json',",
+      "},",
+      "body: JSON.stringify(postData),",
+      "})",
       "",
       "if(!res.ok){",
-      "throw new Error('res.status)",
+      "throw new Error('Bad response', { cause: { res } })",
       "}",
+      "const data = await res.json()",
+      "return data",
+      "catch(error){",
+      "throw error",
+      "}}"
+    ]
+  },
+  "fetchPOST": {
+    "prefix": "fetchGET",
+    "body": [
+      "async function fetchGET(){",
+      "try{",
+      "const res = await fetch(``)",
+      "",
+      "if(!res.ok){",
+      "throw new Error('Bad response', { cause: { res } })",
       "}",
-      "catch(err){",
-      "console.error('¡Hubo un problema con la solicitud!', err)",
+      "const data = await res.json()",
+      "return data",
+      "catch(error){",
+      "throw error",
       "}}"
     ]
   },

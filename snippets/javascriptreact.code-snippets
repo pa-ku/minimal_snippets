@@ -31,37 +31,83 @@
       "},[$3])"
     ]
   },
+  "set Timer": {
+    "prefix": "setTimer",
+    "body": [
+      "useEffect(() => {",
+      "$1",
+      "const timer = setTimeout(() => {",
+      "return console.log('timer finish')",
+      "}, 1000)",
+      "return () => clearTimeout(timer)",
+      "",
+      "},[$3])"
+    ],
+    "description": "Set interval optimized for react"
+  },
   "createcontext": {
     "prefix": "context",
     "body": [
-      " import { createContext } from 'react'",
+      "import { createContext, createContext, useContext } from 'react'",
+      "export const ${TM_FILENAME_BASE} = createContext()",
+      "",
+      "export function use${TM_FILENAME_BASE}() {",
+      "const context = useContext(TimeContext)",
+      "if (!context) {",
+      "throw new Error('use${TM_FILENAME_BASE} debe estar dentro de un provider')",
+      "}",
+      "return context",
+      "}",
       "export const ${TM_FILENAME_BASE} = createContext()",
       "",
       "export function  use${TM_FILENAME_BASE}() {",
-      "const context = useContext(AuthContext)",
+      "const context = useContext(${TM_FILENAME_BASE})",
       "if (!context) {",
-      "throw new Error('useContext debe estar dentro de un provider')}",
+      "throw new Error('use${TM_FILENAME_BASE} debe estar dentro de un provider')}",
       "return context",
       "}",
-
-      "export function ${TM_FILENAME_BASE}Provider({ children }) {",
-      "  return <${TM_FILENAME_BASE}.Provider value={{}}>{children}</${TM_FILENAME_BASE}.Provider>}"
+      "export function use$1Provider({ children }) {",
+      "",
+      "return <${TM_FILENAME_BASE}.Provider value={{}}>{children}</${TM_FILENAME_BASE}.Provider>}"
     ]
   },
-  "fetchapi": {
-    "prefix": "fetch",
+  "fetchGET": {
+    "prefix": "fetchPOST",
     "body": [
-      "async function fetch(){",
+      "async function fetchPOST(postData){",
       "try{",
-      "const res = await fetch(``)",
-      "const data = await res.json()",
+      "const res = await fetch(``), {",
+      " method: 'POST',",
+      "headers: {",
+      "'Content-Type': 'application/json',",
+      "},",
+      "body: JSON.stringify(postData),",
+      "})",
       "",
       "if(!res.ok){",
-      "throw new Error('res.status)",
+      "throw new Error('Bad response', { cause: { res } })",
       "}",
+      "const data = await res.json()",
+      "return data",
+      "catch(error){",
+      "throw error",
+      "}}"
+    ]
+  },
+  "fetchPOST": {
+    "prefix": "fetchGET",
+    "body": [
+      "async function fetchGET(){",
+      "try{",
+      "const res = await fetch(``)",
+      "",
+      "if(!res.ok){",
+      "throw new Error('Bad response', { cause: { res } })",
       "}",
-      "catch(err){",
-      "console.error('¡Hubo un problema con la solicitud!', err)",
+      "const data = await res.json()",
+      "return data",
+      "catch(error){",
+      "throw error",
       "}}"
     ]
   },

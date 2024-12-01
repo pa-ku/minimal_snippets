@@ -39,13 +39,16 @@
 
 | _Snippet_ | _Codigo_                                               |
 | --------- | ------------------------------------------------------ |
-| context   | Template for context and provider                      |
+| context   | Improved template for context and provider                      |
 | usestate  | const \[$1, set$2\] = useState($3)                     |
 | useeffect | useEffect(( ) => {return function cleanup( ){ }}\[ \]) |
 | useref    | const $1 = useRef()                                    |
 | styled    | Template for styled components                         |
 | <<        | &lt;$1 /&gt;                                           |
 | component | creates a function component template                  |
+| setTimer  | ussing useEffect and set interval creates a timer      |
+
+
 
 ## `Express`
 
