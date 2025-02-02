@@ -26,24 +26,21 @@
   "fetchGET": {
     "prefix": "fetchPOST",
     "body": [
-      "async function fetchPOST(postData){",
-      "try{",
-      "const res = await fetch(``), {",
-      " method: 'POST',",
-      "headers: {",
-      "'Content-Type': 'application/json',",
-      "},",
-      "body: JSON.stringify(postData),",
+      "async function fetchPOST(postData) {",
+      "try {",
+      "const res = await fetch(``, {",
+      "method: 'POST',",
+      " headers: { 'Content-Type': 'application/json' },",
+      "body: JSON.stringify(postData)",
       "})",
-      "",
-      "if(!res.ok){",
+      "if (!res.ok) {",
       "throw new Error('Bad response', { cause: { res } })",
       "}",
       "const data = await res.json()",
       "return data",
-      "catch(error){",
-      "throw error",
-      "}}"
+      "} catch (error){",
+      "console.error('Error in fetchPOST', { error })}",
+      "}"
     ]
   },
   "fetchPOST": {

@@ -48,25 +48,17 @@
   "createcontext": {
     "prefix": "context",
     "body": [
-      "import { createContext, createContext, useContext } from 'react'",
+      "import { createContext, useContext } from 'react'",
       "export const ${TM_FILENAME_BASE} = createContext()",
       "",
       "export function use${TM_FILENAME_BASE}() {",
-      "const context = useContext(TimeContext)",
+      "const context = useContext(${TM_FILENAME_BASE})",
       "if (!context) {",
       "throw new Error('use${TM_FILENAME_BASE} debe estar dentro de un provider')",
       "}",
       "return context",
       "}",
-      "export const ${TM_FILENAME_BASE} = createContext()",
-      "",
-      "export function  use${TM_FILENAME_BASE}() {",
-      "const context = useContext(${TM_FILENAME_BASE})",
-      "if (!context) {",
-      "throw new Error('use${TM_FILENAME_BASE} debe estar dentro de un provider')}",
-      "return context",
-      "}",
-      "export function use$1Provider({ children }) {",
+      "export function $1Provider({ children }) {",
       "",
       "return <${TM_FILENAME_BASE}.Provider value={{}}>{children}</${TM_FILENAME_BASE}.Provider>}"
     ]
@@ -74,24 +66,21 @@
   "fetchGET": {
     "prefix": "fetchPOST",
     "body": [
-      "async function fetchPOST(postData){",
-      "try{",
-      "const res = await fetch(``), {",
-      " method: 'POST',",
-      "headers: {",
-      "'Content-Type': 'application/json',",
-      "},",
-      "body: JSON.stringify(postData),",
+      "async function fetchPOST(postData) {",
+      "try {",
+      "const res = await fetch(``, {",
+      "method: 'POST',",
+      " headers: { 'Content-Type': 'application/json' },",
+      "body: JSON.stringify(postData)",
       "})",
-      "",
-      "if(!res.ok){",
+      "if (!res.ok) {",
       "throw new Error('Bad response', { cause: { res } })",
       "}",
       "const data = await res.json()",
       "return data",
-      "catch(error){",
-      "throw error",
-      "}}"
+      "} catch (error){",
+      "console.error('Error in fetchPOST', { error })}",
+      "}"
     ]
   },
   "fetchPOST": {
@@ -106,13 +95,13 @@
       "}",
       "const data = await res.json()",
       "return data",
-      "catch(error){",
-      "throw error",
-      "}}"
+      "} catch (error){",
+      "console.error('Error in fetchPOST', { error })}",
+      "}"
     ]
   },
   "Function Component": {
-    "prefix": "component",
+    "prefix": "$component",
     "body": [
       "export default function ${TM_FILENAME_BASE}(){",
       "\treturn(",

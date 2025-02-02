@@ -32,13 +32,21 @@
     ]
   },
   "createcontext": {
-    "prefix": "context",
+    "prefix": "$context",
     "body": [
-      " import { createContext } from 'react'",
+      "import { createContext, useContext } from 'react'",
       "export const ${TM_FILENAME_BASE} = createContext()",
       "",
-      "export function ${TM_FILENAME_BASE}Provider({ children }) {",
-      "  return <${TM_FILENAME_BASE}.Provider value={}>{children}</${TM_FILENAME_BASE}.Provider>}"
+      "export function use${TM_FILENAME_BASE}() {",
+      "const context = useContext(${TM_FILENAME_BASE})",
+      "if (!context) {",
+      "throw new Error('use${TM_FILENAME_BASE} debe estar dentro de un provider')",
+      "}",
+      "return context",
+      "}",
+      "export function $1Provider({ children }) {",
+      "",
+      "return <${TM_FILENAME_BASE}.Provider value={{}}>{children}</${TM_FILENAME_BASE}.Provider>}"
     ]
   },
   "fetchapi": {
